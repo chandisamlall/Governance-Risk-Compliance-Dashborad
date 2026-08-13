@@ -20,41 +20,63 @@ export default function Overview() {
           </h1>
         </div>
 
-        <div className="space-y-4 rounded-lg border border-slate-200 bg-white p-6 text-sm leading-relaxed text-slate-700 shadow-sm">
-          <p>
-            Botium Toys is a small U.S. business that develops and sells
-            toys. The business has a single physical location, which serves
-            as their main office, storefront, and warehouse for their
-            products. However, Botium Toys' online presence has grown,
-            attracting customers in the U.S. and abroad. As a result, their
-            information technology (IT) department is under increasing
-            pressure to support their online market worldwide.
-          </p>
-          <p>
-            The manager of the IT department has decided that an internal IT
-            audit needs to be conducted. She is concerned about maintaining
-            compliance and business operations as the company grows without
-            a clear plan. She believes an internal audit can help secure the
-            company's infrastructure and identify and mitigate potential
-            risks, threats, or vulnerabilities to critical assets.
-          </p>
-          <p>
-            The IT manager is also interested in ensuring that Botium Toys
-            complies with regulations related to internally processing and
-            accepting online payments and conducting business in the
-            European Union (E.U.).
-          </p>
-          <p>
-            The IT manager starts by implementing the National Institute of
-            Standards and Technology Cybersecurity Framework (NIST CSF),
-            establishing an audit scope and goals, listing assets currently
-            managed by the IT department, and completing a risk assessment.
-          </p>
-          <p className="font-medium text-slate-900">
-            The goal of the audit is to provide an overview of the risks
-            and/or fines that the company might experience due to the
-            current state of its security posture.
-          </p>
+        <div className="space-y-6 rounded-lg border border-slate-200 bg-white p-6 text-sm leading-relaxed text-slate-700 shadow-sm">
+          <div>
+            <h2 className="mb-2 font-semibold text-slate-900">
+              Company Overview
+            </h2>
+            <p>
+              Botium Toys is a small U.S.-based toy company that develops and
+              sells toys. It has one physical location that serves as its main
+              office, storefront, and warehouse. As the company has expanded
+              its online presence, it has gained customers across the U.S. and
+              internationally, increasing the demands on its IT department.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="mb-2 font-semibold text-slate-900">
+              Audit Purpose
+            </h2>
+            <p>
+              The IT manager is conducting an internal IT audit to evaluate the
+              company’s current security posture, maintain compliance, and
+              protect business operations. The audit will help identify
+              potential risks, threats, and vulnerabilities affecting critical
+              assets.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="mb-2 font-semibold text-slate-900">Goals</h2>
+            <ul className="list-disc space-y-2 pl-5">
+              <li>Identify cybersecurity risks and vulnerabilities.</li>
+              <li>Protect critical company and customer assets.</li>
+              <li>Maintain compliance with applicable regulations.</li>
+              <li>
+                Evaluate security related to online payment processing.
+              </li>
+              <li>
+                Review compliance requirements for conducting business in the
+                European Union (EU).
+              </li>
+              <li>
+                Reduce the potential for security incidents, financial losses,
+                and regulatory fines.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="mb-2 font-semibold text-slate-900">
+              Overall Audit Goal
+            </h2>
+            <p className="font-medium text-slate-900">
+              The goal of the audit is to provide an overview of the risks
+              and/or fines that the company might experience due to the current
+              state of its security posture.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -62,9 +84,14 @@ export default function Overview() {
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500">
           At a Glance
         </h2>
+
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
           {SUMMARY_CARDS.map((card) => (
-            <InfoCard key={card.label} label={card.label} value={card.value} />
+            <InfoCard
+              key={card.label}
+              label={card.label}
+              value={card.value}
+            />
           ))}
         </div>
       </section>
